@@ -78,12 +78,13 @@ module "eks" {
   # aws-auth configmap
   manage_aws_auth_configmap = true
 
+   aws_auth_users = [
     {
-      userarn  = "arn:aws:iam::belenshi:role/role1"
-      username = "user2"
+      userarn  = "arn:aws:iam::belenshi:user/user1"
+      username = "belenshi"
       groups   = ["system:masters"]
-    },
-
+    }
+  ]
   aws_auth_accounts = [
     "8915-6415-5871",
     "888888888888",
