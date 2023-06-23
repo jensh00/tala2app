@@ -1,7 +1,7 @@
 module "s3_bucket" {
   source = "terraform-aws-modules/s3-bucket/aws"
 
-  bucket = "virgo-s3-bucket"
+  bucket = "virgo-bucket"
   acl    = "private"
 
   control_object_ownership = true
