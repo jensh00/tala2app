@@ -48,7 +48,6 @@ module "eks" {
   ]
   aws_auth_accounts = [
     "8915-6415-5871",
-    "888888888888",
   ]
 
   tags = {
