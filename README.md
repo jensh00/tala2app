@@ -1,3 +1,3 @@
 # virgoAPP
---just for test.
+--just for practice.
 by Captain Cloud.
