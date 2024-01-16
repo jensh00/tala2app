@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_jensh00_tala2app_1705442155859-push-trigger-input-set
+  identifier: Build_jensh00_tala2app_1705442155859pushtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: projectjensh
+  pipeline:
+    identifier: Build_jensh00_tala2app_1705442155859
+    properties:
+      ci:
+        codebase:
+          build:
+            type: branch
+            spec:
+              branch: <+trigger.branch>
