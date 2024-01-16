@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_jensh00_tala2app_1705442155859-pr-trigger-input-set
+  identifier: Build_jensh00_tala2app_1705442155859prtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: projectjensh
+  pipeline:
+    identifier: Build_jensh00_tala2app_1705442155859
+    properties:
+      ci:
+        codebase:
+          build:
+            type: PR
+            spec:
+              number: <+trigger.prNumber>
