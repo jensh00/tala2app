@@ -18,13 +18,12 @@ pipeline:
           execution:
             steps:
               - step:
-                  identifier: echo
-                  name: echo
+                  type: Run
+                  name: build
+                  identifier: build
                   spec:
                     shell: Sh
-                    command: echo repo is cloned!
-                  timeout: ""
-                  type: Run
+                    command: echo SUCCESS!!!
           platform:
             os: Linux
             arch: Amd64
