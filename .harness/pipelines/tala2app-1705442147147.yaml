@@ -23,7 +23,7 @@ pipeline:
                   identifier: build
                   spec:
                     shell: Sh
-                    command: echo SUCCESS!!!
+                    command: ls
           platform:
             os: Linux
             arch: Amd64
