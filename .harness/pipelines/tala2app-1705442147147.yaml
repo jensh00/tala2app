@@ -6,9 +6,9 @@ pipeline:
   properties:
     ci:
       codebase:
-        build: <+input>
         connectorRef: account.Github_OAuth_1705442138716
-        repoName: jensh00/tala2app
+        repoName: tala2app
+        build: <+input>
   stages:
     - stage:
         identifier: build
@@ -31,3 +31,4 @@ pipeline:
             type: Docker
             spec: {}
         type: CI
+        description: ""
