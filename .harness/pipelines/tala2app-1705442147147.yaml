@@ -7,7 +7,7 @@ pipeline:
     ci:
       codebase:
         connectorRef: account.Github_OAuth_1705442138716
-        repoName: tala2app
+        repoName: jensh00/tala2app
         build: <+input>
   stages:
     - stage:
