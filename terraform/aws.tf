@@ -48,3 +48,21 @@ resource "aws_route_table_association" "eks-tala2-rta" {
   subnet_id      = aws_subnet.eks-tala2-subnet[count.index].id
   route_table_id = aws_route_table.eks-tala2-rt.id
 }
+
+### IAM
+resource "aws_iam_policy" "alb_controller_policy" {
+  name        = "ALBIngressControllerIAMPolicy"
+  path        = "/"
+  description = "Policy for ALB Ingress Controller"
+  policy      = file("alb_policy.json") # Create and save the policy in a JSON file
+}
+
+resource "aws_iam_role" "alb_controller_role" {
+  name               = "alb_controller_role"
+  assume_role_policy = data.aws_iam_policy_document.alb_assume_role_policy.json
+}
+
+resource "aws_iam_role_policy_attachment" "alb_controller_attach" {
+  role       = aws_iam_role.alb_controller_role.name
+  policy_arn = aws_iam_policy.alb_controller_policy.arn
+}

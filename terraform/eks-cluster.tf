@@ -49,6 +49,13 @@ resource "aws_eks_cluster" "eks-tala2-cluster" {
   name     = var.cluster-name
   role_arn = aws_iam_role.eks-tala2-cluster-iam.arn
 
+  logging {
+    cluster_logging {
+      enabled = true
+      types   = ["api", "audit", "authenticator", "controllerManager", "scheduler"]
+    }
+  }
+
   vpc_config {
     security_group_ids = [aws_security_group.eks-tala2-cluster-sg.id]
     subnet_ids         = aws_subnet.eks-tala2-subnet.*.id
